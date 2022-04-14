@@ -1,6 +1,5 @@
 import java.util.Random;
 import java.util.Scanner;
-
 public class Main {
     public static void main (String [] args) {
         //System objects
@@ -18,6 +17,7 @@ public class Main {
         int numHealthPotions = 3;
         int healthPotioHealAmount= 30;
         int healthPotionDropChance = 50; //Percentage
+        int choice=1;
 
         boolean running = true;
 
@@ -39,6 +39,8 @@ public class Main {
                 System.out.println("\t1. Attack");
                 System.out.println("\t2. Drink Health Potion");
                 System.out.println("\t3. Run!");
+                System.out.println("\t4. Choose your path");
+                System.out.println("\t5. Pick a Torch");
 
                 String input = in.nextLine();
                 if(input.equals("1")) {
@@ -70,7 +72,34 @@ public class Main {
                 }
                 else if(input.equals("3")) {
                         System.out.println("\tYou run away from the" + enemy + "!");
-                        continue GAME;
+                }
+                else if (input.equals("4")){
+                    while (choice!=0) {
+                        String output = in.nextLine();
+                        System.out.printf("Choices:\n");
+                        System.out.printf("1. To move north press 1\n");
+                        System.out.printf("2. To move south press 2\n");
+                        System.out.printf("3. To move east press 3\n");
+                        System.out.printf("4. To move west press 4\n");
+                       if (output.equals("1")){
+                           System.out.println("You are on the North side");
+                       }
+                        else if (output.equals("2")){
+                            System.out.println("You are on the South side");
+                        }
+                        else if (output.equals("3")){
+                            System.out.println("You are on the East side");
+                        }
+                        else if (output.equals("4")){
+                            System.out.println("You are on the West side");
+                        }
+                    }
+                    }
+                else if (input.equals("5")){
+                    String weapon;
+                    weapon = "torch";
+                    System.out.println("You pick up a " + weapon);
+
                 }
                 else {
                       System.out.println("\tInvalid command!");
