@@ -21,7 +21,9 @@ public class Main {
 
         boolean running = true;
 
-        System.out.println("Welcome to the Dangeon!");
+        System.out.println("Welcome to the Dangeon!\n");
+        System.out.println("Here is your first enemy\n");
+        System.out.println("--------------------------");
 
         GAME:
         while(running) {
